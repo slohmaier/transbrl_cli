@@ -37,7 +37,7 @@ int main(int argc, char * argv[]) {
     int ret = 0;
     
     //parse options
-    while ((optch = getopt(argc, argv, "hm:W:H:t:vo:")) != -1) {
+    while ((optch = getopt(argc, argv, "hm:W:H:t:vdo:")) != -1) {
         switch (optch) {
             case 'h':
                 print_help(argv);
