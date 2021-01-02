@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		F8C7EC8525A0FB68006426AA /* transbrl_cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = transbrl_cli; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C7EC8825A0FB68006426AA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F8C7ECB225A0FF66006426AA /* liblouis */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = liblouis; path = liblouis/liblouis; sourceTree = SOURCE_ROOT; };
+		F8C7ECB325A0FF9C006426AA /* src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = src; path = md4c/src; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,19 @@
 		F8C7EC8725A0FB68006426AA /* transbrl_cli */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECB325A0FF9C006426AA /* src */,
+				F8C7ECB225A0FF66006426AA /* liblouis */,
+				F8C7ECB025A0FE2D006426AA /* md2brl */,
 				F8C7EC8825A0FB68006426AA /* main.c */,
 			);
 			path = transbrl_cli;
+			sourceTree = "<group>";
+		};
+		F8C7ECB025A0FE2D006426AA /* md2brl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = md2brl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +254,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDRP4Q2D3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -252,6 +265,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KDRP4Q2D3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
