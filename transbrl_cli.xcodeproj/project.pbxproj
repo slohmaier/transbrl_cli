@@ -20,6 +20,8 @@
 		F8C7ECE525A12C29006426AA /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDE25A12C29006426AA /* utils.c */; };
 		F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDF25A12C29006426AA /* lou_translateString.c */; };
 		F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */; };
+		F8C7ECF225A13128006426AA /* entity.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECEE25A13128006426AA /* entity.c */; };
+		F8C7ECF325A13128006426AA /* md4c.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECF025A13128006426AA /* md4c.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +59,10 @@
 		F8C7ECDE25A12C29006426AA /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		F8C7ECDF25A12C29006426AA /* lou_translateString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lou_translateString.c; sourceTree = "<group>"; };
 		F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lou_backTranslateString.c; sourceTree = "<group>"; };
+		F8C7ECEE25A13128006426AA /* entity.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entity.c; sourceTree = "<group>"; };
+		F8C7ECEF25A13128006426AA /* md4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4c.h; sourceTree = "<group>"; };
+		F8C7ECF025A13128006426AA /* md4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md4c.c; sourceTree = "<group>"; };
+		F8C7ECF125A13128006426AA /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,10 @@
 		F8C7ECD425A12467006426AA /* md4c */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECEE25A13128006426AA /* entity.c */,
+				F8C7ECF125A13128006426AA /* entity.h */,
+				F8C7ECF025A13128006426AA /* md4c.c */,
+				F8C7ECEF25A13128006426AA /* md4c.h */,
 			);
 			path = md4c;
 			sourceTree = "<group>";
@@ -213,8 +223,10 @@
 			files = (
 				F8C7ECE325A12C29006426AA /* compileTranslationTable.c in Sources */,
 				F8C7ECC125A11431006426AA /* readfile.c in Sources */,
+				F8C7ECF225A13128006426AA /* entity.c in Sources */,
 				F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */,
 				F8C7ECB725A10B65006426AA /* md2brl.c in Sources */,
+				F8C7ECF325A13128006426AA /* md4c.c in Sources */,
 				F8C7ECC925A11E7B006426AA /* main_check.c in Sources */,
 				F8C7ECE425A12C29006426AA /* pattern.c in Sources */,
 				F8C7EC8925A0FB68006426AA /* main.c in Sources */,
