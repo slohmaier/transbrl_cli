@@ -29,8 +29,6 @@
 /* Begin PBXFileReference section */
 		F8C7EC8525A0FB68006426AA /* transbrl_cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = transbrl_cli; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C7EC8825A0FB68006426AA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		F8C7ECB225A0FF66006426AA /* liblouis */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = liblouis; path = liblouis/liblouis; sourceTree = SOURCE_ROOT; };
-		F8C7ECB325A0FF9C006426AA /* src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = src; path = md4c/src; sourceTree = SOURCE_ROOT; };
 		F8C7ECB525A10B65006426AA /* md2brl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl.h; sourceTree = "<group>"; };
 		F8C7ECB625A10B65006426AA /* md2brl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brl.c; sourceTree = "<group>"; };
 		F8C7ECBA25A10C98006426AA /* bool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bool.h; sourceTree = "<group>"; };
@@ -72,9 +70,8 @@
 		F8C7EC8725A0FB68006426AA /* transbrl_cli */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECD225A12446006426AA /* external */,
 				F8C7ECB925A10C7A006426AA /* utils */,
-				F8C7ECB325A0FF9C006426AA /* src */,
-				F8C7ECB225A0FF66006426AA /* liblouis */,
 				F8C7ECB025A0FE2D006426AA /* md2brl */,
 				F8C7EC8825A0FB68006426AA /* main.c */,
 				F8C7ECC325A11E20006426AA /* main_output.h */,
@@ -104,6 +101,29 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		F8C7ECD225A12446006426AA /* external */ = {
+			isa = PBXGroup;
+			children = (
+				F8C7ECD425A12467006426AA /* md4c */,
+				F8C7ECD325A12453006426AA /* liblouis */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		F8C7ECD325A12453006426AA /* liblouis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = liblouis;
+			sourceTree = "<group>";
+		};
+		F8C7ECD425A12467006426AA /* md4c */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = md4c;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +150,7 @@
 		F8C7EC7D25A0FB68006426AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = NO;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					F8C7EC8425A0FB68006426AA = {

@@ -8,6 +8,7 @@
 #include "main_output.h"
 
 #include <stdio.h>
+//#include "liblouis.h"
 
 void print_help(char **argv) {
     printf("transbrl_cli - Translate markdown to brl\n");
