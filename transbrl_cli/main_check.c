@@ -17,7 +17,7 @@ int checkopts(char *markdownfile, int width, int height, char *loutables, char *
     if (markdownfile == NULL) { fprintf(stderr, "Missing option -m. Try -h.\n"); ret = 2; }
     if (width == -1) { fprintf(stderr, "Missing option -W. Try -h.\n"); ret = 2; }
     if (height == -1) { fprintf(stderr, "Missing option -H. Try -h.\n"); ret = 2; }
-    if (loutables == NULL) { fprintf(stderr, "Missing option -m. Try -h.\n"); ret = 2; }
+    if (loutables == NULL) { fprintf(stderr, "Missing option -t. Try -h.\n"); ret = 2; }
     if (outfile == NULL) { fprintf(stderr, "Missing option -o. Try -h.\n"); ret = 2; }
     
     return ret;
