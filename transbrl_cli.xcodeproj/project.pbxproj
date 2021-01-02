@@ -12,6 +12,13 @@
 		F8C7ECC125A11431006426AA /* readfile.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC025A11431006426AA /* readfile.c */; };
 		F8C7ECC525A11E20006426AA /* main_output.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC425A11E20006426AA /* main_output.c */; };
 		F8C7ECC925A11E7B006426AA /* main_check.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC825A11E7B006426AA /* main_check.c */; };
+		F8C7ECE025A12C29006426AA /* metadata.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECD625A12C29006426AA /* metadata.c */; };
+		F8C7ECE125A12C29006426AA /* logging.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECD725A12C29006426AA /* logging.c */; };
+		F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDA25A12C29006426AA /* commonTranslationFunctions.c */; };
+		F8C7ECE325A12C29006426AA /* compileTranslationTable.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDC25A12C29006426AA /* compileTranslationTable.c */; };
+		F8C7ECE425A12C29006426AA /* pattern.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDD25A12C29006426AA /* pattern.c */; };
+		F8C7ECE525A12C29006426AA /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDE25A12C29006426AA /* utils.c */; };
+		F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDF25A12C29006426AA /* lou_translateString.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +45,16 @@
 		F8C7ECC425A11E20006426AA /* main_output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_output.c; sourceTree = "<group>"; };
 		F8C7ECC725A11E7B006426AA /* main_check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_check.h; sourceTree = "<group>"; };
 		F8C7ECC825A11E7B006426AA /* main_check.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_check.c; sourceTree = "<group>"; };
+		F8C7ECD625A12C29006426AA /* metadata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = metadata.c; sourceTree = "<group>"; };
+		F8C7ECD725A12C29006426AA /* logging.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging.c; sourceTree = "<group>"; };
+		F8C7ECD825A12C29006426AA /* liblouis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liblouis.h; sourceTree = "<group>"; };
+		F8C7ECD925A12C29006426AA /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		F8C7ECDA25A12C29006426AA /* commonTranslationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commonTranslationFunctions.c; sourceTree = "<group>"; };
+		F8C7ECDB25A12C29006426AA /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		F8C7ECDC25A12C29006426AA /* compileTranslationTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compileTranslationTable.c; sourceTree = "<group>"; };
+		F8C7ECDD25A12C29006426AA /* pattern.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pattern.c; sourceTree = "<group>"; };
+		F8C7ECDE25A12C29006426AA /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		F8C7ECDF25A12C29006426AA /* lou_translateString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lou_translateString.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +130,16 @@
 		F8C7ECD325A12453006426AA /* liblouis */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECDA25A12C29006426AA /* commonTranslationFunctions.c */,
+				F8C7ECDC25A12C29006426AA /* compileTranslationTable.c */,
+				F8C7ECDB25A12C29006426AA /* config.h */,
+				F8C7ECD925A12C29006426AA /* internal.h */,
+				F8C7ECD825A12C29006426AA /* liblouis.h */,
+				F8C7ECD725A12C29006426AA /* logging.c */,
+				F8C7ECDF25A12C29006426AA /* lou_translateString.c */,
+				F8C7ECD625A12C29006426AA /* metadata.c */,
+				F8C7ECDD25A12C29006426AA /* pattern.c */,
+				F8C7ECDE25A12C29006426AA /* utils.c */,
 			);
 			path = liblouis;
 			sourceTree = "<group>";
@@ -181,11 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C7ECE325A12C29006426AA /* compileTranslationTable.c in Sources */,
 				F8C7ECC125A11431006426AA /* readfile.c in Sources */,
+				F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */,
 				F8C7ECB725A10B65006426AA /* md2brl.c in Sources */,
 				F8C7ECC925A11E7B006426AA /* main_check.c in Sources */,
+				F8C7ECE425A12C29006426AA /* pattern.c in Sources */,
 				F8C7EC8925A0FB68006426AA /* main.c in Sources */,
+				F8C7ECE125A12C29006426AA /* logging.c in Sources */,
+				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
+				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,
 				F8C7ECC525A11E20006426AA /* main_output.c in Sources */,
+				F8C7ECE525A12C29006426AA /* utils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +345,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TABLESDIR = /Users/stefan/git/transbrl_cli/liblouis/tables;
 			};
 			name = Debug;
 		};
@@ -322,6 +357,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TABLESDIR = /Users/stefan/git/transbrl_cli/liblouis/tables;
 			};
 			name = Release;
 		};
