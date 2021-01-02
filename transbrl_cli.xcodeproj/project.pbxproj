@@ -19,6 +19,7 @@
 		F8C7ECE425A12C29006426AA /* pattern.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDD25A12C29006426AA /* pattern.c */; };
 		F8C7ECE525A12C29006426AA /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDE25A12C29006426AA /* utils.c */; };
 		F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECDF25A12C29006426AA /* lou_translateString.c */; };
+		F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		F8C7ECDD25A12C29006426AA /* pattern.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pattern.c; sourceTree = "<group>"; };
 		F8C7ECDE25A12C29006426AA /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		F8C7ECDF25A12C29006426AA /* lou_translateString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lou_translateString.c; sourceTree = "<group>"; };
+		F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lou_backTranslateString.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		F8C7ECD325A12453006426AA /* liblouis */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */,
 				F8C7ECDA25A12C29006426AA /* commonTranslationFunctions.c */,
 				F8C7ECDC25A12C29006426AA /* compileTranslationTable.c */,
 				F8C7ECDB25A12C29006426AA /* config.h */,
@@ -218,6 +221,7 @@
 				F8C7ECE125A12C29006426AA /* logging.c in Sources */,
 				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
 				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,
+				F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */,
 				F8C7ECC525A11E20006426AA /* main_output.c in Sources */,
 				F8C7ECE525A12C29006426AA /* utils.c in Sources */,
 			);

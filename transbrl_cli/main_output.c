@@ -8,7 +8,7 @@
 #include "main_output.h"
 
 #include <stdio.h>
-//#include "liblouis.h"
+#include "liblouis.h"
 
 void print_help(char **argv) {
     printf("transbrl_cli - Translate markdown to brl\n");
@@ -26,7 +26,8 @@ void print_startmsg(char *markdownfile, int width, int height, char *loutables, 
     printf("###########################\n");
     printf("# md-fike: %s\n", markdownfile);
     printf("# outfile: %s\n", outfile);
-    printf("# Page: width=%d height=%d", width, height);
+    printf("# Page: width=%d height=%d\n", width, height);
     printf("# liblouis tables: %s\n", loutables);
+    printf("# liblouis-version: %s\n", lou_version());
     printf("###########################\n");
 }

@@ -4175,7 +4175,8 @@ _lou_getTablePath(void) {
 			free(path);
 		}
 #else
-		cp += sprintf(cp, ",%s", TABLESDIR);
+        cp += sprintf(cp, ",%s", "/Users/stefan/git/transbrl_cli/liblouis/tables");
+		//FIXME: original: cp += sprintf(cp, ",%s", TABLESDIR);
 #endif
 	}
 	if (searchPath[0] != '\0')
