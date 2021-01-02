@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F8C7EC8925A0FB68006426AA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7EC8825A0FB68006426AA /* main.c */; };
+		F8C7ECB725A10B65006426AA /* md2brl.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECB625A10B65006426AA /* md2brl.c */; };
+		F8C7ECC125A11431006426AA /* readfile.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC025A11431006426AA /* readfile.c */; };
+		F8C7ECC525A11E20006426AA /* main_output.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC425A11E20006426AA /* main_output.c */; };
+		F8C7ECC925A11E7B006426AA /* main_check.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC825A11E7B006426AA /* main_check.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +31,15 @@
 		F8C7EC8825A0FB68006426AA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F8C7ECB225A0FF66006426AA /* liblouis */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = liblouis; path = liblouis/liblouis; sourceTree = SOURCE_ROOT; };
 		F8C7ECB325A0FF9C006426AA /* src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = src; path = md4c/src; sourceTree = SOURCE_ROOT; };
+		F8C7ECB525A10B65006426AA /* md2brl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl.h; sourceTree = "<group>"; };
+		F8C7ECB625A10B65006426AA /* md2brl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brl.c; sourceTree = "<group>"; };
+		F8C7ECBA25A10C98006426AA /* bool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bool.h; sourceTree = "<group>"; };
+		F8C7ECBF25A11431006426AA /* readfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = readfile.h; sourceTree = "<group>"; };
+		F8C7ECC025A11431006426AA /* readfile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readfile.c; sourceTree = "<group>"; };
+		F8C7ECC325A11E20006426AA /* main_output.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_output.h; sourceTree = "<group>"; };
+		F8C7ECC425A11E20006426AA /* main_output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_output.c; sourceTree = "<group>"; };
+		F8C7ECC725A11E7B006426AA /* main_check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_check.h; sourceTree = "<group>"; };
+		F8C7ECC825A11E7B006426AA /* main_check.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_check.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +72,15 @@
 		F8C7EC8725A0FB68006426AA /* transbrl_cli */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECB925A10C7A006426AA /* utils */,
 				F8C7ECB325A0FF9C006426AA /* src */,
 				F8C7ECB225A0FF66006426AA /* liblouis */,
 				F8C7ECB025A0FE2D006426AA /* md2brl */,
 				F8C7EC8825A0FB68006426AA /* main.c */,
+				F8C7ECC325A11E20006426AA /* main_output.h */,
+				F8C7ECC425A11E20006426AA /* main_output.c */,
+				F8C7ECC725A11E7B006426AA /* main_check.h */,
+				F8C7ECC825A11E7B006426AA /* main_check.c */,
 			);
 			path = transbrl_cli;
 			sourceTree = "<group>";
@@ -70,8 +88,20 @@
 		F8C7ECB025A0FE2D006426AA /* md2brl */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECB525A10B65006426AA /* md2brl.h */,
+				F8C7ECB625A10B65006426AA /* md2brl.c */,
 			);
 			path = md2brl;
+			sourceTree = "<group>";
+		};
+		F8C7ECB925A10C7A006426AA /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F8C7ECBA25A10C98006426AA /* bool.h */,
+				F8C7ECBF25A11431006426AA /* readfile.h */,
+				F8C7ECC025A11431006426AA /* readfile.c */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C7ECC125A11431006426AA /* readfile.c in Sources */,
+				F8C7ECB725A10B65006426AA /* md2brl.c in Sources */,
+				F8C7ECC925A11E7B006426AA /* main_check.c in Sources */,
 				F8C7EC8925A0FB68006426AA /* main.c in Sources */,
+				F8C7ECC525A11E20006426AA /* main_output.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
