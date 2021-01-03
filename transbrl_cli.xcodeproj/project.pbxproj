@@ -31,6 +31,7 @@
 		F8C7ED1025A1CC8A006426AA /* md2brlcb_text.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED0F25A1CC8A006426AA /* md2brlcb_text.c */; };
 		F8C7ED1425A1CD69006426AA /* md2brlcb_debug_log.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */; };
 		F8C7ED1825A1FCAC006426AA /* insert_newlines.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1725A1FCAC006426AA /* insert_newlines.c */; };
+		F8C7ED1C25A20A68006426AA /* md4c_enu2string.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1B25A20A68006426AA /* md4c_enu2string.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +91,8 @@
 		F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_debug_log.c; sourceTree = "<group>"; };
 		F8C7ED1625A1FCAC006426AA /* insert_newlines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = insert_newlines.h; sourceTree = "<group>"; };
 		F8C7ED1725A1FCAC006426AA /* insert_newlines.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = insert_newlines.c; sourceTree = "<group>"; };
+		F8C7ED1A25A20A68006426AA /* md4c_enu2string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md4c_enu2string.h; sourceTree = "<group>"; };
+		F8C7ED1B25A20A68006426AA /* md4c_enu2string.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md4c_enu2string.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				F8C7ECC025A11431006426AA /* readfile.c */,
 				F8C7ED1625A1FCAC006426AA /* insert_newlines.h */,
 				F8C7ED1725A1FCAC006426AA /* insert_newlines.c */,
+				F8C7ED1A25A20A68006426AA /* md4c_enu2string.h */,
+				F8C7ED1B25A20A68006426AA /* md4c_enu2string.c */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				F8C7EC8925A0FB68006426AA /* main.c in Sources */,
 				F8C7ED0425A1C845006426AA /* md2brlcb_leave_block.c in Sources */,
 				F8C7ECE125A12C29006426AA /* logging.c in Sources */,
+				F8C7ED1C25A20A68006426AA /* md4c_enu2string.c in Sources */,
 				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
 				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,
 				F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */,
