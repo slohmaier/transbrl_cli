@@ -15,6 +15,7 @@
 #include "readfile.h"
 #include "main_check.h"
 #include "main_output.h"
+#include "liblouis.h"
 
 void print_help(char **argv);
 int parse_dimenstion(char *optarg, char *title);
@@ -64,6 +65,11 @@ int main(int argc, char * argv[]) {
     //create data object for parser
     data = md2brl_new(width, height, loutables, debug, verbose);
     if (data == NULL) { fprintf(stderr, "Could not create data-obkect: %s\n", strerror(errno)); ret = -1; }
+    
+    //set lilouis log level according to flags
+    logLevels louloglevel = LOU_LOG_ERROR;
+    if (verbose) louloglevel = LOU_LOG_INFO;
+    if (debug) louloglevel = LOU_LOG_DEBUG;
     
     //print information
     if (verbose) print_startmsg(markdownfile, width, height, loutables, outfile);

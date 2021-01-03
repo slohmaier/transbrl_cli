@@ -8,6 +8,6 @@
 #ifndef md2brl_trans_h
 #define md2brl_trans_h
 
-#include <stdio.h>
+char *md2brl_trans(const char *text, int textlen, const char *loutable);
 
 #endif /* md2brl_trans_h */
