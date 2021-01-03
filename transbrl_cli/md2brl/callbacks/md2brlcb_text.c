@@ -14,7 +14,7 @@
 #include <string.h>
 
 int md2brlcb_text(MD_TEXTTYPE type, const MD_CHAR *text, MD_SIZE size, void *userdata) {
-    int ret = 0, textsize;
+    int ret = 0;
     md2brl *data = (md2brl*)userdata;
     
     //free old text and traslate
@@ -24,10 +24,6 @@ int md2brlcb_text(MD_TEXTTYPE type, const MD_CHAR *text, MD_SIZE size, void *use
         fprintf(stderr, "\nTRANSLATION_ERROR for text: '%s'\n", text);
         ret = -1;
     }
-    textsize = (int)strlen(data->last_text);
     
-    //insert line breaks
-    insert_newlines(data->last_text, &textsize, data->width);
-    printf(data->last_text);
     return ret;
 }
