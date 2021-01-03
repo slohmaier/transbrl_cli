@@ -9,6 +9,7 @@
 #include "md4c_enu2string.h"
 #include <stdio.h>
 #include "md2brlcb_leave_block_h.h"
+#include "md2brlcb_leave_block_p.h"
 
 int md2brlcb_leave_block(MD_BLOCKTYPE type, void* detail, void* userdata) {
     int ret = 0;
@@ -19,6 +20,7 @@ int md2brlcb_leave_block(MD_BLOCKTYPE type, void* detail, void* userdata) {
             ret = md2brlcb_leave_block_header(type, (MD_BLOCK_H_DETAIL*)detail, data);
             break;
         case MD_BLOCK_P:
+            ret = md2brlcb_leave_block_p(type, (MD_BLOCK_H_DETAIL*)detail, data);
             break;
             
         //ignore some blocks

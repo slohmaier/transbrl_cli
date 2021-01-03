@@ -22,9 +22,13 @@ int init_headers(md2brl* data);
 
 /* add title text and one line of header-var followed by a newline*/
 int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md2brl *data) {
-    int neededchars = data->last_text_size + 3; //+3 for 3 newline
+    int neededchars = data->last_text_size + 3/*\n's*/;
     int headerchars;
     char *header;
+    
+    //2 newlines for header_1 1 newline otherwise
+    if (detail->level == 1) neededchars += 2;
+    else neededchars += 1;
     
     //init_headerstrings
     if (header_1 == NULL || header_2 == NULL) init_headers(data);
@@ -39,6 +43,10 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     else header = header_2;
     
     if (incbuffer(data, neededchars) == NULL) return -1;
+    
+    //2 newlines for header_1 1 newline otherwise
+    if (detail->level == 1) strncat(data->output, "\n\n", 2);
+    else strncat(data->output, "\n", 1);
     
     //add text, newline, header, 2 newlines
     strncat(data->output, data->last_text, (size_t)data->last_text_size);

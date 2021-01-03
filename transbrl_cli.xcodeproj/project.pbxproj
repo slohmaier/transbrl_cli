@@ -34,6 +34,7 @@
 		F8C7ED1C25A20A68006426AA /* md4c_enu2string.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1B25A20A68006426AA /* md4c_enu2string.c */; };
 		F8C7ED2025A20E88006426AA /* md2brlcb_leave_block_h.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1F25A20E88006426AA /* md2brlcb_leave_block_h.c */; };
 		F8C7ED2425A218FA006426AA /* outputbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED2325A218FA006426AA /* outputbuffer.c */; };
+		F8C7ED2825A228C0006426AA /* md2brlcb_leave_block_p.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED2725A228C0006426AA /* md2brlcb_leave_block_p.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,8 @@
 		F8C7ED1F25A20E88006426AA /* md2brlcb_leave_block_h.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_leave_block_h.c; sourceTree = "<group>"; };
 		F8C7ED2225A218FA006426AA /* outputbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = outputbuffer.h; sourceTree = "<group>"; };
 		F8C7ED2325A218FA006426AA /* outputbuffer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = outputbuffer.c; sourceTree = "<group>"; };
+		F8C7ED2625A228C0006426AA /* md2brlcb_leave_block_p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_leave_block_p.h; sourceTree = "<group>"; };
+		F8C7ED2725A228C0006426AA /* md2brlcb_leave_block_p.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_leave_block_p.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,8 @@
 				F8C7ED0F25A1CC8A006426AA /* md2brlcb_text.c */,
 				F8C7ED1225A1CD69006426AA /* md2brlcb_debug_log.h */,
 				F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */,
+				F8C7ED2625A228C0006426AA /* md2brlcb_leave_block_p.h */,
+				F8C7ED2725A228C0006426AA /* md2brlcb_leave_block_p.c */,
 			);
 			path = callbacks;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			files = (
 				F8C7ED0025A1BAC7006426AA /* md2brlcb_enter_block.c in Sources */,
 				F8C7ECE325A12C29006426AA /* compileTranslationTable.c in Sources */,
+				F8C7ED2825A228C0006426AA /* md2brlcb_leave_block_p.c in Sources */,
 				F8C7ECC125A11431006426AA /* readfile.c in Sources */,
 				F8C7ECF225A13128006426AA /* entity.c in Sources */,
 				F8C7ED1025A1CC8A006426AA /* md2brlcb_text.c in Sources */,
