@@ -163,9 +163,9 @@ _lou_backTranslate(const char *tableList, const char *displayTableList,
 	// inlen-1. outputPos has the length of the (consumed) initial input and has values
 	// ranging from 0 to outlen-1.
 	int *posMapping = NULL;
-	int *posMapping1;
-	int *posMapping2;
-	int *posMapping3;
+	int *posMapping1 = NULL;
+	int *posMapping2 = NULL;
+	int *posMapping3 = NULL;
 	int cursorPosition;
 	int cursorStatus;
 	const TranslationTableRule **appliedRules;
@@ -991,11 +991,11 @@ makeCorrections(const TranslationTableHeader *table, int mode, int currentPass,
 	_lou_resetPassVariables();
 	while (pos < input->length) {
 		int posBefore = pos;
-		TranslationTableOpcode currentOpcode;
-		const TranslationTableRule *currentRule; /* pointer to current rule in table */
+		TranslationTableOpcode currentOpcode = 0;
+		const TranslationTableRule *currentRule = NULL; /* pointer to current rule in table */
 		const widechar *passInstructions;
-		int passIC; /* Instruction counter */
-		PassRuleMatch patternMatch;
+		int passIC = 0; /* Instruction counter */
+        PassRuleMatch patternMatch = {0,0,0,0};
 		int length = input->length - pos;
 		const TranslationTableCharacter *character = getChar(input->chars[pos], table);
 		const TranslationTableCharacter *character2;
@@ -1097,11 +1097,11 @@ backTranslateString(const TranslationTableHeader *table, int mode, int currentPa
 	while (pos < input->length) {
 		/* the main translation loop */
 		int currentDotslen; /* length of current find string */
-		TranslationTableOpcode currentOpcode;
+		TranslationTableOpcode currentOpcode = 0;
 		const TranslationTableRule *currentRule; /* pointer to current rule in table */
 		TranslationTableCharacterAttributes beforeAttributes;
 		const widechar *passInstructions;
-		int passIC; /* Instruction counter */
+		int passIC = 0; /* Instruction counter */
 		PassRuleMatch patternMatch;
 		back_setBefore(table, output, &beforeAttributes);
 		if ((allUpper == 1) && (beforeAttributes & CTC_UpperCase))
@@ -1616,10 +1616,10 @@ translatePass(const TranslationTableHeader *table, int mode, int currentPass,
 	while (pos < input->length) { /* the main multipass translation loop */
 		int posBefore = pos;
 		TranslationTableOpcode currentOpcode;
-		const TranslationTableRule *currentRule; /* pointer to current rule in table */
+        const TranslationTableRule *currentRule = NULL; /* pointer to current rule in table */
 		const widechar *passInstructions;
-		int passIC; /* Instruction counter */
-		PassRuleMatch patternMatch;
+		int passIC = 0; /* Instruction counter */
+        PassRuleMatch patternMatch = {0,0,0,0};
 		if (!posIncremented)
 			currentOpcode = CTO_Always;
 		else

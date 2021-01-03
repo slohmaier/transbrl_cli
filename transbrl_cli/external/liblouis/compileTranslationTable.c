@@ -4518,7 +4518,7 @@ void
 getTable(const char *translationTableList, const char *displayTableList,
 		TranslationTableHeader **translationTable, DisplayTableHeader **displayTable) {
 	/* Keep track of which tables have already been compiled */
-	int translationTableListLen, displayTableListLen = 0;
+	int translationTableListLen = 0, displayTableListLen = 0;
 	if (translationTableList == NULL || *translationTableList == 0)
 		translationTable = NULL;
 	if (displayTableList == NULL || *displayTableList == 0) displayTable = NULL;

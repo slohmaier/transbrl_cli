@@ -235,7 +235,7 @@ makeCorrections(const TranslationTableHeader *table, const InString *input,
 		OutString *output, int *posMapping, formtype *typebuf, int *realInlen,
 		int *cursorPosition, int *cursorStatus, int mode) {
 	int pos;
-	int transOpcode;
+	int transOpcode = 0;
 	const TranslationTableRule *transRule;
 	int transCharslen;
 	int passCharDots;
@@ -1013,7 +1013,7 @@ translatePass(const TranslationTableHeader *table, int currentPass, const InStri
 		OutString *output, int *posMapping, int *realInlen, int *cursorPosition,
 		int *cursorStatus, int mode) {
 	int pos;
-	int transOpcode;
+	int transOpcode = 0;
 	const TranslationTableRule *transRule;
 	int transCharslen;
 	int passCharDots;
