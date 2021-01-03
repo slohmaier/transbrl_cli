@@ -35,6 +35,7 @@ md2brl *md2brl_new(int width, int height, char *loutables, bool debug, bool verb
 }
 
 void md2brl_free(md2brl* data) {
+    if (data->last_text != NULL) free(data->last_text);
     free(data->output);
     free(data);
 }
