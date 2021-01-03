@@ -22,6 +22,14 @@
 		F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECEB25A13090006426AA /* lou_backTranslateString.c */; };
 		F8C7ECF225A13128006426AA /* entity.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECEE25A13128006426AA /* entity.c */; };
 		F8C7ECF325A13128006426AA /* md4c.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECF025A13128006426AA /* md4c.c */; };
+		F8C7ECF825A133A0006426AA /* md2brl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECF725A133A0006426AA /* md2brl_parser.c */; };
+		F8C7ECFC25A133DA006426AA /* md2brl_trans.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECFB25A133DA006426AA /* md2brl_trans.c */; };
+		F8C7ED0025A1BAC7006426AA /* md2brlcb_enter_block.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECFF25A1BAC7006426AA /* md2brlcb_enter_block.c */; };
+		F8C7ED0425A1C845006426AA /* md2brlcb_leave_block.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED0325A1C845006426AA /* md2brlcb_leave_block.c */; };
+		F8C7ED0825A1C98A006426AA /* md2brlcb_enter_span.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED0725A1C98A006426AA /* md2brlcb_enter_span.c */; };
+		F8C7ED0C25A1CBCE006426AA /* md2brlcb_leave_span.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED0B25A1CBCE006426AA /* md2brlcb_leave_span.c */; };
+		F8C7ED1025A1CC8A006426AA /* md2brlcb_text.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED0F25A1CC8A006426AA /* md2brlcb_text.c */; };
+		F8C7ED1425A1CD69006426AA /* md2brlcb_debug_log.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +71,22 @@
 		F8C7ECEF25A13128006426AA /* md4c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4c.h; sourceTree = "<group>"; };
 		F8C7ECF025A13128006426AA /* md4c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md4c.c; sourceTree = "<group>"; };
 		F8C7ECF125A13128006426AA /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
+		F8C7ECF625A133A0006426AA /* md2brl_parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl_parser.h; sourceTree = "<group>"; };
+		F8C7ECF725A133A0006426AA /* md2brl_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brl_parser.c; sourceTree = "<group>"; };
+		F8C7ECFA25A133DA006426AA /* md2brl_trans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl_trans.h; sourceTree = "<group>"; };
+		F8C7ECFB25A133DA006426AA /* md2brl_trans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brl_trans.c; sourceTree = "<group>"; };
+		F8C7ECFE25A1BAC7006426AA /* md2brlcb_enter_block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_enter_block.h; sourceTree = "<group>"; };
+		F8C7ECFF25A1BAC7006426AA /* md2brlcb_enter_block.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_enter_block.c; sourceTree = "<group>"; };
+		F8C7ED0225A1C845006426AA /* md2brlcb_leave_block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_leave_block.h; sourceTree = "<group>"; };
+		F8C7ED0325A1C845006426AA /* md2brlcb_leave_block.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_leave_block.c; sourceTree = "<group>"; };
+		F8C7ED0625A1C98A006426AA /* md2brlcb_enter_span.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_enter_span.h; sourceTree = "<group>"; };
+		F8C7ED0725A1C98A006426AA /* md2brlcb_enter_span.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_enter_span.c; sourceTree = "<group>"; };
+		F8C7ED0A25A1CBCE006426AA /* md2brlcb_leave_span.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_leave_span.h; sourceTree = "<group>"; };
+		F8C7ED0B25A1CBCE006426AA /* md2brlcb_leave_span.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_leave_span.c; sourceTree = "<group>"; };
+		F8C7ED0E25A1CC8A006426AA /* md2brlcb_text.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_text.h; sourceTree = "<group>"; };
+		F8C7ED0F25A1CC8A006426AA /* md2brlcb_text.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_text.c; sourceTree = "<group>"; };
+		F8C7ED1225A1CD69006426AA /* md2brlcb_debug_log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brlcb_debug_log.h; sourceTree = "<group>"; };
+		F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_debug_log.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +134,13 @@
 		F8C7ECB025A0FE2D006426AA /* md2brl */ = {
 			isa = PBXGroup;
 			children = (
+				F8C7ECF525A13363006426AA /* callbacks */,
 				F8C7ECB525A10B65006426AA /* md2brl.h */,
 				F8C7ECB625A10B65006426AA /* md2brl.c */,
+				F8C7ECF625A133A0006426AA /* md2brl_parser.h */,
+				F8C7ECF725A133A0006426AA /* md2brl_parser.c */,
+				F8C7ECFA25A133DA006426AA /* md2brl_trans.h */,
+				F8C7ECFB25A133DA006426AA /* md2brl_trans.c */,
 			);
 			path = md2brl;
 			sourceTree = "<group>";
@@ -162,6 +191,25 @@
 				F8C7ECEF25A13128006426AA /* md4c.h */,
 			);
 			path = md4c;
+			sourceTree = "<group>";
+		};
+		F8C7ECF525A13363006426AA /* callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				F8C7ECFE25A1BAC7006426AA /* md2brlcb_enter_block.h */,
+				F8C7ECFF25A1BAC7006426AA /* md2brlcb_enter_block.c */,
+				F8C7ED0225A1C845006426AA /* md2brlcb_leave_block.h */,
+				F8C7ED0325A1C845006426AA /* md2brlcb_leave_block.c */,
+				F8C7ED0625A1C98A006426AA /* md2brlcb_enter_span.h */,
+				F8C7ED0725A1C98A006426AA /* md2brlcb_enter_span.c */,
+				F8C7ED0A25A1CBCE006426AA /* md2brlcb_leave_span.h */,
+				F8C7ED0B25A1CBCE006426AA /* md2brlcb_leave_span.c */,
+				F8C7ED0E25A1CC8A006426AA /* md2brlcb_text.h */,
+				F8C7ED0F25A1CC8A006426AA /* md2brlcb_text.c */,
+				F8C7ED1225A1CD69006426AA /* md2brlcb_debug_log.h */,
+				F8C7ED1325A1CD69006426AA /* md2brlcb_debug_log.c */,
+			);
+			path = callbacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,21 +269,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C7ED0025A1BAC7006426AA /* md2brlcb_enter_block.c in Sources */,
 				F8C7ECE325A12C29006426AA /* compileTranslationTable.c in Sources */,
 				F8C7ECC125A11431006426AA /* readfile.c in Sources */,
 				F8C7ECF225A13128006426AA /* entity.c in Sources */,
+				F8C7ED1025A1CC8A006426AA /* md2brlcb_text.c in Sources */,
 				F8C7ECE625A12C29006426AA /* lou_translateString.c in Sources */,
 				F8C7ECB725A10B65006426AA /* md2brl.c in Sources */,
 				F8C7ECF325A13128006426AA /* md4c.c in Sources */,
+				F8C7ED0C25A1CBCE006426AA /* md2brlcb_leave_span.c in Sources */,
 				F8C7ECC925A11E7B006426AA /* main_check.c in Sources */,
+				F8C7ED0825A1C98A006426AA /* md2brlcb_enter_span.c in Sources */,
 				F8C7ECE425A12C29006426AA /* pattern.c in Sources */,
 				F8C7EC8925A0FB68006426AA /* main.c in Sources */,
+				F8C7ED0425A1C845006426AA /* md2brlcb_leave_block.c in Sources */,
 				F8C7ECE125A12C29006426AA /* logging.c in Sources */,
 				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
 				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,
 				F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */,
+				F8C7ED1425A1CD69006426AA /* md2brlcb_debug_log.c in Sources */,
 				F8C7ECC525A11E20006426AA /* main_output.c in Sources */,
 				F8C7ECE525A12C29006426AA /* utils.c in Sources */,
+				F8C7ECF825A133A0006426AA /* md2brl_parser.c in Sources */,
+				F8C7ECFC25A133DA006426AA /* md2brl_trans.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

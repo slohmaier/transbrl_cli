@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include "md2brl.h"
+#include "md2brl_parser.h"
 #include "readfile.h"
 #include "main_check.h"
 #include "main_output.h"
@@ -74,6 +75,9 @@ int main(int argc, char * argv[]) {
         return -1;
     }
     else if (verbose) printf("SUCCESS!\n");
+    
+    //parse markdown
+    md2brl_parse(mdcontent, strlen(mdcontent), data);
     
     //free memory
     if (verbose) printf("# Cleaning up...\n");
