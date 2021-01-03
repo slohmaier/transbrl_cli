@@ -174,7 +174,7 @@ lou_backTranslate(const char *tableList, const widechar *inbuf, int *inlen,
 /**
  * Print error messages to a file
  *
- * @deprecated As of 2.6.0, applications using liblouis should
+ * @ deprecated As of 2.6.0, applications using liblouis should
  * implement their own logging system.
  */
 LIBLOUIS_API
@@ -186,7 +186,7 @@ lou_logPrint(const char *format, ...);
  *
  * If it is not used, this file is stderr
  *
- * @deprecated As of 2.6.0, applications using liblouis should
+ * @ deprecated As of 2.6.0, applications using liblouis should
  * implement their own logging system.
  */
 LIBLOUIS_API
@@ -206,7 +206,7 @@ lou_readCharFromFile(const char *fileName, int *mode);
 /**
  * Close the log file so it can be read by other functions.
  *
- * @deprecated As of 2.6.0, applications using liblouis should
+ * @ deprecated As of 2.6.0, applications using liblouis should
  * implement their own logging system.
  */
 LIBLOUIS_API

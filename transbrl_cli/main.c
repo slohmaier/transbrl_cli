@@ -77,7 +77,10 @@ int main(int argc, char * argv[]) {
     else if (verbose) printf("SUCCESS!\n");
     
     //parse markdown
-    md2brl_parse(mdcontent, strlen(mdcontent), data);
+    if (md2brl_parse(mdcontent, (unsigned)strlen(mdcontent), data) != 0) {
+        fprintf(stderr, "PARSER-ERRPR: %s\n", strerror(errno));
+        return -1;
+    }
     
     //free memory
     if (verbose) printf("# Cleaning up...\n");
