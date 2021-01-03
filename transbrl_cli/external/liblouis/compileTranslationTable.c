@@ -1363,10 +1363,10 @@ parseDots(FileInfo *nested, CharsString *cells, const CharsString *token) {
 
 	for (index = 0; index < token->length; index++) {
 		int started = index != start;
-        int dot;
 		widechar character = token->chars[index];
 		switch (character) { /* or dots to make up Braille cell */
 			{
+				int dot;
 			case '1':
 				dot = LOU_DOT_1;
 				goto haveDot;
@@ -2662,8 +2662,6 @@ compileRule(FileInfo *nested, TranslationTableOffset *newRuleOffset,
 	int k, i;
 	int noback, nofor, nocross;
 	noback = nofor = nocross = 0;
-    TranslationTableCharacterAttributes *attributes;
-    const CharacterClass *class;
 doOpcode:
 	if (!getToken(nested, &token, NULL, &lastToken)) return 1;	/* blank line */
 	if (token.chars[0] == '#' || token.chars[0] == '<') return 1; /* comment */
@@ -3920,6 +3918,8 @@ doOpcode:
 		}
 
 			{
+				TranslationTableCharacterAttributes *attributes;
+				const CharacterClass *class;
 			case CTO_After:
 				attributes = &after;
 				goto doBeforeAfter;
@@ -4175,8 +4175,7 @@ _lou_getTablePath(void) {
 			free(path);
 		}
 #else
-        cp += sprintf(cp, ",%s", "/Users/stefan/git/transbrl_cli/liblouis/tables");
-		//FIXME: original: cp += sprintf(cp, ",%s", TABLESDIR);
+		cp += sprintf(cp, ",%s", TABLESDIR);
 #endif
 	}
 	if (searchPath[0] != '\0')
@@ -4191,7 +4190,7 @@ _lou_getTablePath(void) {
  * Tries to resolve tableList against base. The search path is set to
  * `LOUIS_TABLEPATH`, `dataPath` and `programPath` (in that order).
  *
- * @param tableList A file path, may be absolute or relative. May be a list of
+ * @param table A file path, may be absolute or relative. May be a list of
  *              tables separated by comma's. In that case, the first table
  *              is used as the base for the other subtables.
  * @param base A file path or directory path, or NULL.
@@ -4365,8 +4364,8 @@ includeFile(FileInfo *nested, CharsString *includedFile, TranslationTableHeader 
 static int
 compileTable(const char *tableList, const char *displayTableList,
 		TranslationTableHeader **translationTable, DisplayTableHeader **displayTable) {
-	char **tableFiles = NULL;
-	char **subTable = NULL;
+	char **tableFiles;
+	char **subTable;
 	if (translationTable && !tableList) return 0;
 	if (displayTable && !displayTableList) return 0;
 	if (!translationTable && !displayTable) return 0;
@@ -4518,7 +4517,7 @@ void
 getTable(const char *translationTableList, const char *displayTableList,
 		TranslationTableHeader **translationTable, DisplayTableHeader **displayTable) {
 	/* Keep track of which tables have already been compiled */
-	int translationTableListLen = 0, displayTableListLen = 0;
+	int translationTableListLen, displayTableListLen = 0;
 	if (translationTableList == NULL || *translationTableList == 0)
 		translationTable = NULL;
 	if (displayTableList == NULL || *displayTableList == 0) displayTable = NULL;

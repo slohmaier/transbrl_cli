@@ -750,7 +750,7 @@ _lou_showAttributes(TranslationTableCharacterAttributes a);
 /**
  * Return number of the opcode
  *
- * @param tofind the opcodes
+ * @param toFind the opcodes
  */
 TranslationTableOpcode EXPORT_CALL
 _lou_findOpcodeNumber(const char *tofind);
