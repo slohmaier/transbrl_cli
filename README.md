@@ -13,6 +13,12 @@ None at the moment I use XCode C console application.
 ## Features
 convert markdown to brf
 
+## TODO list
+- ~~basic feature to  convert markdown to brf~~
+- split by height and add page numbers
+- support all tags from md4c
+- what to do with pictures? braille-graphics conversion like ASCII-ART.
+
 ## Suppoerted Blocks
 - MD_BLOCK_DOC
 - ~~MD_BLOCK_QUOTE~~
