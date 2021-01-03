@@ -24,6 +24,7 @@ md2brl *md2brl_new(int width, int height, char *loutables, bool debug, bool verb
     
     //state vars
     data->last_text = NULL;
+    data->last_text_size = -1;
     
     //create empty string
     data->output_capacity = MD2BRL_NEWSIZE;

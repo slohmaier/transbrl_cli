@@ -13,6 +13,7 @@
 typedef struct {
     //states
     char *last_text;
+    int last_text_size;
     
     //output related
     char *output;

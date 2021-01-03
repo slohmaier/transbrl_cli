@@ -88,6 +88,8 @@ int main(int argc, char * argv[]) {
         return -1;
     }
     
+    if (verbose && debug) printf("%s", data->output);
+    
     //free memory
     if (verbose) printf("# Cleaning up...\n");
     free(mdcontent);

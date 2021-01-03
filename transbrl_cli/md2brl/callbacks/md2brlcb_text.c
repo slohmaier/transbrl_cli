@@ -24,6 +24,7 @@ int md2brlcb_text(MD_TEXTTYPE type, const MD_CHAR *text, MD_SIZE size, void *use
         fprintf(stderr, "\nTRANSLATION_ERROR for text: '%s'\n", text);
         ret = -1;
     }
+    data->last_text_size = (int)strlen(data->last_text);
     
     return ret;
 }
