@@ -1,10 +1,21 @@
 # transbrl_cli
 transbrl_cli translates markdown files to brf-format ready to print.
 
-Base on these libraries:
+## Base on these libraries:
 - liblouis http://liblouis.org/
 - md4c https://github.com/mity/md4c
 (local version of the libraries in repository)
+
+## Help-Test
+```
+transbrl_cli [-h] [-m MARKDOWNFILE] 
+        [-o outputfile can be - for stdout]
+        [-H HEIGHT in chars]
+        [-W WIDTH in chars]
+        [-t libloouis tables list]
+        [-d activate debug output]
+        [-v activate verbose output]
+```
 
 # Build System
 None at the moment I use XCode C console application.
