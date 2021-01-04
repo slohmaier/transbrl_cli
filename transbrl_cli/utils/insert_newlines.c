@@ -10,12 +10,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include "outputbuffer.h"
+#include <stdio.h>
 
 /* function inserts newline every width characters*/
 char *insert_newlines(char *text, int *textlen, int width) {
     int i = width-1;
     int j;
     
+    printf("i=%d textlen=%d text=%s", i, *textlen, text);
     while (i < *textlen) {
         j = i;
         bool isnum = true;

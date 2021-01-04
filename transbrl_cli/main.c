@@ -103,7 +103,7 @@ int main(int argc, char * argv[]) {
     if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
     
     if (strcmp(outfile, "-") != 0) {
-        if (writefile(outfile, data->output, data->output_size) == NULL) {
+        if (writefile(outfile, data->output, data->output_size) != 0) {
             fprintf(stderr, "\nwritefile ERROR: %s\n", strerror(errno));
         }
     }
