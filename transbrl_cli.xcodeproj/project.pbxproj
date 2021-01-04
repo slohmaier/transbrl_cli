@@ -36,6 +36,7 @@
 		F8C7ED2425A218FA006426AA /* outputbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED2325A218FA006426AA /* outputbuffer.c */; };
 		F8C7ED2825A228C0006426AA /* md2brlcb_leave_block_p.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED2725A228C0006426AA /* md2brlcb_leave_block_p.c */; };
 		F8C7ED2C25A26D18006426AA /* insert_pagebreaks.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED2B25A26D18006426AA /* insert_pagebreaks.c */; };
+		F8C7ED3125A39509006426AA /* writefile.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ED3025A39509006426AA /* writefile.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,6 +106,8 @@
 		F8C7ED2725A228C0006426AA /* md2brlcb_leave_block_p.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brlcb_leave_block_p.c; sourceTree = "<group>"; };
 		F8C7ED2A25A26D18006426AA /* insert_pagebreaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = insert_pagebreaks.h; sourceTree = "<group>"; };
 		F8C7ED2B25A26D18006426AA /* insert_pagebreaks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = insert_pagebreaks.c; sourceTree = "<group>"; };
+		F8C7ED2F25A39509006426AA /* writefile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writefile.h; sourceTree = "<group>"; };
+		F8C7ED3025A39509006426AA /* writefile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writefile.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				F8C7ED1B25A20A68006426AA /* md4c_enu2string.c */,
 				F8C7ED2225A218FA006426AA /* outputbuffer.h */,
 				F8C7ED2325A218FA006426AA /* outputbuffer.c */,
+				F8C7ED2F25A39509006426AA /* writefile.h */,
+				F8C7ED3025A39509006426AA /* writefile.c */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				F8C7ED0425A1C845006426AA /* md2brlcb_leave_block.c in Sources */,
 				F8C7ECE125A12C29006426AA /* logging.c in Sources */,
 				F8C7ED2425A218FA006426AA /* outputbuffer.c in Sources */,
+				F8C7ED3125A39509006426AA /* writefile.c in Sources */,
 				F8C7ED1C25A20A68006426AA /* md4c_enu2string.c in Sources */,
 				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
 				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,

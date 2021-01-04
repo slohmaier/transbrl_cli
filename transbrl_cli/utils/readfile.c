@@ -32,5 +32,6 @@ char *readfile(const char *path) {
     #else
     if (fread(content, sizeof(char), fsize, fd) < fsize) return NULL;
     #endif
+    fclose(fd);
     return content;
 }

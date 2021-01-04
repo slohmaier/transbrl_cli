@@ -21,6 +21,7 @@
 #include "main_output.h"
 #include "liblouis.h"
 #include "insert_pagebreaks.h"
+#include "writefile.h"
 
 void print_help(char **argv);
 int parse_dimenstion(char *optarg, char *title);
@@ -85,7 +86,7 @@ int main(int argc, char * argv[]) {
         fprintf(stderr, "ERROR: %s\n", strerror(errno));
         return -1;
     }
-    else if (verbose) printf("SUCCESS!\n");
+    if (verbose) printf("SUCCESS!\n");
     
     //parse markdown
     if (md2brl_parse(mdcontent, (unsigned)strlen(mdcontent), data) != 0) {
@@ -99,7 +100,13 @@ int main(int argc, char * argv[]) {
         return -1;
     }
     
-    if (verbose && debug) printf("%s", data->output);
+    if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
+    
+    if (strcmp(outfile, "-") != 0) {
+        if (writefile(outfile, data->output, data->output_size) == NULL) {
+            fprintf(stderr, "\nwritefile ERROR: %s\n", strerror(errno));
+        }
+    }
     
     //free memory
     if (verbose) printf("# Cleaning up...\n");

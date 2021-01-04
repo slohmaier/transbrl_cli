@@ -96,7 +96,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-"
+            argument = "/Users/stefan/transbrl_cli/output.brf"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
