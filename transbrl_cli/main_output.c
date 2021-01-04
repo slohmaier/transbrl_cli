@@ -14,10 +14,12 @@ void print_help(char **argv) {
     printf("transbrl_cli - Translate markdown to brl\n");
     printf("\n");
     printf("%s [-h] [-m MARKDOWNFILE] \n", argv[0]);
+    printf("        [-o outputfile can be - for stdout]\n");
     printf("        [-H HEIGHT in chars]\n");
     printf("        [-W WIDTH in chars]\n");
     printf("        [-t libloouis tables list]\n");
     printf("        [-d activate debug output]\n");
+    printf("        [-v activate verbose output]\n");
     printf("\n");
 }
 
