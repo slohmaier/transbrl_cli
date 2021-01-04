@@ -20,6 +20,7 @@
 #include "main_check.h"
 #include "main_output.h"
 #include "liblouis.h"
+#include "insert_pagebreaks.h"
 
 void print_help(char **argv);
 int parse_dimenstion(char *optarg, char *title);
@@ -89,6 +90,12 @@ int main(int argc, char * argv[]) {
     //parse markdown
     if (md2brl_parse(mdcontent, (unsigned)strlen(mdcontent), data) != 0) {
         fprintf(stderr, "PARSER-ERRPR: %s\n", strerror(errno));
+        return -1;
+    }
+    
+    //insert pagebreaks
+    if (insert_pagebreaks(data) == NULL) {
+        fprintf(stderr, "PAGENUM-ERROR: %s", strerror(errno));
         return -1;
     }
     

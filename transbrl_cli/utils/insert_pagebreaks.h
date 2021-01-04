@@ -10,4 +10,6 @@
 
 #include "md2brl.h"
 
+md2brl *insert_pagebreaks(md2brl *data);
+
 #endif /* insert_pagebreaks_h */

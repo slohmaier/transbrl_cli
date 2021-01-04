@@ -23,3 +23,18 @@ md2brl *incbuffer(md2brl *data, int neededsize) {
     }
     return data;
 }
+
+/* move all text beginning at start by offset */
+void movechar(char *text, int textlen, int start, int offset) {
+    int i;
+    for (i = textlen + offset; i > start; i--) {
+        text[i] = text[i-offset];
+    }
+}
+    
+/* increase size of allocated memory by plus*/
+char *inctextsize(char *text, int *textsize, int plus) {
+    text = (char *)realloc(text, sizeof(char)*(*textsize+plus));
+    *textsize = *textsize + plus;
+    return text;
+}

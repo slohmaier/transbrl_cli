@@ -11,5 +11,7 @@
 #include "md2brl.h"
 
 md2brl *incbuffer(md2brl *data, int neededsize);
+void movechar(char *text, int textlen, int start, int offset);
+char *inctextsize(char *text, int *textsize, int plus);
 
 #endif /* outputbuffer_h */

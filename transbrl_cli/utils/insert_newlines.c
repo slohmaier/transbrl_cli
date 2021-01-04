@@ -9,9 +9,7 @@
 #include "bool.h"
 #include <stdlib.h>
 #include <string.h>
-
-void movechar(char *text, int textlen, int start, int offset);
-char *inctextsize(char *text, int *textsize, int plus);
+#include "outputbuffer.h"
 
 /* function inserts newline every width characters*/
 char *insert_newlines(char *text, int *textlen, int width) {
@@ -39,20 +37,5 @@ char *insert_newlines(char *text, int *textlen, int width) {
         
         i += width + 2;
     }
-    return text;
-}
-
-/* move all text beginning at start by offset */
-void movechar(char *text, int textlen, int start, int offset) {
-    int i;
-    for (i = textlen + offset; i > start; i--) {
-        text[i] = text[i-offset];
-    }
-}
-    
-/* increase size of allocated memory by plus*/
-char *inctextsize(char *text, int *textsize, int plus) {
-    text = (char *)realloc(text, sizeof(char)*(*textsize+plus));
-    *textsize = *textsize + plus;
     return text;
 }
