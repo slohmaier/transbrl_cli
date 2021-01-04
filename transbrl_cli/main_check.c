@@ -6,7 +6,7 @@
 //
 
 #include "main_check.h"
-
+#include <stdint.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>

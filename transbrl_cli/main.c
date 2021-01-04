@@ -6,7 +6,11 @@
 //
 
 #include <stdio.h>
+#ifdef _MSC_VER
+#include "getopt-windows.h"
+#else
 #include <getopt.h>
+#endif
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
