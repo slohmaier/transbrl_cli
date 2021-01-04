@@ -27,6 +27,10 @@ char *readfile(const char *path) {
     //alloc read and return
     content = (char*) malloc(sizeof(char*)*fsize);
     if (content == NULL) return NULL;
+    #ifdef _MSC_VER //FIXME
+    fread(content, sizeof(char), fsize, fd);
+    #else
     if (fread(content, sizeof(char), fsize, fd) < fsize) return NULL;
+    #endif
     return content;
 }
