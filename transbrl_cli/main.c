@@ -22,6 +22,7 @@
 #include "liblouis.h"
 #include "insert_pagebreaks.h"
 #include "writefile.h"
+#include "set_loupath.h"
 
 void print_help(char **argv);
 int parse_dimenstion(char *optarg, char *title);
@@ -76,6 +77,11 @@ int main(int argc, char * argv[]) {
     logLevels louloglevel = LOU_LOG_ERROR;
     if (verbose) louloglevel = LOU_LOG_INFO;
     if (debug) louloglevel = LOU_LOG_DEBUG;
+
+    if (set_loupath() != 0) {
+        fprintf(stderr, "ERROR: Could not set lou path!\n");
+        return 1;
+    }
     
     //print information
     if (verbose) print_startmsg(markdownfile, width, height, loutables, outfile);
@@ -100,7 +106,7 @@ int main(int argc, char * argv[]) {
         return -1;
     }
     
-    if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
+    //if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
     
     if (strcmp(outfile, "-") != 0) {
         if (writefile(outfile, data->output, data->output_size) != 0) {
