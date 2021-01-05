@@ -34,7 +34,8 @@ void movechar(char *text, int textlen, int start, int offset) {
     
 /* increase size of allocated memory by plus*/
 char *inctextsize(char *text, int *textsize, int plus) {
-    text = (char *)realloc(text, sizeof(char)*(*textsize+plus));
+    int newsize = *textsize + plus;
+    text = (char *)realloc(text, sizeof(char)*newsize);
     *textsize = *textsize + plus;
     return text;
 }
