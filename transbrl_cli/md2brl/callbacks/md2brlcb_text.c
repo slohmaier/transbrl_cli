@@ -19,7 +19,7 @@ int md2brlcb_text(MD_TEXTTYPE type, const MD_CHAR *text, MD_SIZE size, void *use
     
     //free old text and traslate
     if (data->last_text != NULL) free(data->last_text);
-    data->last_text = md2brl_trans(text, size, data->loutables);
+    data->last_text = md2brl_trans(text, &size, data->loutables);
     if (data->last_text == NULL) {
         fprintf(stderr, "\nTRANSLATION_ERROR for text: '%s'\n", text);
         ret = -1;
