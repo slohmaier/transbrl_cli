@@ -3,3 +3,4 @@ xcuserdata
 *.obj
 *.o
 /transbrl_cli.*output.brf
+output.brf

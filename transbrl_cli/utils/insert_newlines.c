@@ -40,8 +40,6 @@ char *insert_newlines(char *text, int *textlen, int width) {
         text[j+1] = '\n';
         
         i += width + 2;
-        printf("#####");
-        printf("%s", text);
     }
     return text;
 }

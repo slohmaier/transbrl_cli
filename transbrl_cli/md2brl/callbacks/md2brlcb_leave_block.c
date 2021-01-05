@@ -10,10 +10,13 @@
 #include <stdio.h>
 #include "md2brlcb_leave_block_h.h"
 #include "md2brlcb_leave_block_p.h"
+#include "md4c_enu2string.h"
 
 int md2brlcb_leave_block(MD_BLOCKTYPE type, void* detail, void* userdata) {
     int ret = 0;
     md2brl *data = (md2brl*)userdata;
+    
+    if (data->debug) printf("DEBUG: LEAVE-BLOCK %s\n", mdblocktype2string(type));
     
     switch(type) {
         case MD_BLOCK_H:
