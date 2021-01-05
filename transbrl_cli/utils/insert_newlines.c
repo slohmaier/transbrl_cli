@@ -15,31 +15,40 @@
 /* function inserts newline every width characters*/
 char *insert_newlines(char *text, int *textlen, int width) {
     int i = width-1;
-    int j;
+    int j, i_old = 0;
+    int newsize = (*textlen/width)+1 + *textlen + 1;
+    char *newtext;
+    int cursize = 0;
     
-    printf("i=%d textlen=%d text=%s", i, *textlen, text);
+    newtext = (char*)malloc(sizeof(char)*newsize);
+    if (newtext == NULL) return NULL;
+    newtext[0] = '\0';
+    
     while (i < *textlen) {
         j = i;
-        bool isnum = true;
+        bool isnum = false;
         while (text[j] != ' ' && i-j < width-1) {
-            if ((text[j] < '0' || text[j] > '9') && text[j] != '#') isnum = false;
             j--;
         }
+        if (text[j+1] == '#' && j+2 < *textlen && text[j+2] >= 'a' && text[j+2] <= 'j') isnum = true;
         
         //if wholw line has no space break line at end
-        if (j-i == width-1) j = i;
+        if (j-i >= width-1) j = i;
         //don't break numbers and leave at least two characters.
         else if (!isnum && i-j > 2) j = i - 1;
         
-        //increate text, move characters and set break;
-        text = inctextsize(text, textlen, 2);
-        if (text == NULL) return NULL;
-        movechar(text, *textlen, j, 2);
-        //only print '-' if not at space
-        if (text[j] != ' ') text[j] = '-';
-        text[j+1] = '\n';
+        //copy string to this state
+        strncat(newtext, &text[i_old], j-i_old);
+        cursize += j-i_old;
+        if (text[j] != ' ') strcat(newtext, "-");
+        else j++; //skip space
+        strcat(newtext, "\n");
         
-        i += width + 2;
+        i_old = j;
+        i = j + width;
     }
-    return text;
+    
+    //free old text and return new one
+    free(text);
+    return newtext;
 }

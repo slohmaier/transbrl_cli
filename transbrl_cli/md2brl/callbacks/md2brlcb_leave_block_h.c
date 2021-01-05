@@ -61,6 +61,8 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     strncat(data->output, "\n\n", 2);
     data->output_size += data->last_text_size + headerchars + 3;
     
+    free(data->last_text);
+    
     return 0;
 }
 
