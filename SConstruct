@@ -1,4 +1,5 @@
 # SConstruct
+import sys
 from glob import glob
 
 sources = glob("transbrl_cli/*.c")
@@ -17,9 +18,14 @@ include_paths = [
     'transbrl_cli/external/liblouis'
 ]
 
+debugflag = '-g'
+if sys.platform.find('win') != -1:
+    debugflag = '/DEBUG'
+
 env = Environment()
 transbrl_cli = Program(
     target='transbrl_cli',
     source=sources,
-    CPPPATH=include_paths
+    CPPPATH=include_paths,
+    CCFLAGS = [debugflag]
 )
