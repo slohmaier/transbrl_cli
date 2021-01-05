@@ -101,12 +101,12 @@ int main(int argc, char * argv[]) {
     }
     
     //insert pagebreaks
-    if (insert_pagebreaks(data) == NULL) {
+    /* TODO if (insert_pagebreaks(data) == NULL) {
         fprintf(stderr, "PAGENUM-ERROR: %s", strerror(errno));
         return -1;
-    }
+    }*/
     
-    //if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
+    if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
     
     if (strcmp(outfile, "-") != 0) {
         if (writefile(outfile, data->output, data->output_size) != 0) {

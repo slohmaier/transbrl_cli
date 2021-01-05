@@ -35,9 +35,13 @@ char *insert_newlines(char *text, int *textlen, int width) {
         text = inctextsize(text, textlen, 2);
         if (text == NULL) return NULL;
         movechar(text, *textlen, j, 2);
-        text[j] = '-'; text[j+1] = '\n';
+        //only print '-' if not at space
+        if (text[j] != ' ') text[j] = '-';
+        text[j+1] = '\n';
         
         i += width + 2;
+        printf("#####");
+        printf("%s", text);
     }
     return text;
 }

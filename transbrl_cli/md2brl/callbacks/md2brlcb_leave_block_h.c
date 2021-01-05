@@ -45,14 +45,21 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     if (incbuffer(data, neededchars) == NULL) return -1;
     
     //2 newlines for header_1 1 newline otherwise
-    if (detail->level == 1) strncat(data->output, "\n\n", 2);
-    else strncat(data->output, "\n", 1);
+    if (detail->level == 1) {
+        strncat(data->output, "\n\n", 2);
+        data->output_size += 2;
+    }
+    else {
+        strncat(data->output, "\n", 1);
+        data->output_size += 1;
+    }
     
     //add text, newline, header, 2 newlines
     strncat(data->output, data->last_text, (size_t)data->last_text_size);
     strncat(data->output, "\n", 1);
     strncat(data->output, header, headerchars);
     strncat(data->output, "\n\n", 2);
+    data->output_size += data->last_text_size + headerchars + 3;
     
     return 0;
 }

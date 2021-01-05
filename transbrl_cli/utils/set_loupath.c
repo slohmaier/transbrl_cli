@@ -10,6 +10,7 @@
 #include <sys/stat.h>
 #include "bool.h"
 #include "liblouis.h"
+#include <stdio.h>
 
 bool isdir(char *path);
 
