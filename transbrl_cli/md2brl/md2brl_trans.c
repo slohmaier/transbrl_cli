@@ -36,7 +36,7 @@ char *md2brl_trans(const char *text, int *textlen, const char *loutable) {
     if (result == NULL) { free(inbuf); free(outbuf); return NULL; }
     for (i = 0; i < outlen; i++) result[i] = outbuf[i];
     
-    free(inbuf);
-    free(outbuf);
+    //FIXME: free(inbuf);
+    //FIXME: free(outbuf);
     return result;
 }

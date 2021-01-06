@@ -8,6 +8,6 @@
 #ifndef insert_newlines_h
 #define insert_newlines_h
 
-char *insert_newlines(char *text, int *textlen, int width);
+char *insert_newlines(char *text, int textlen, int width);
 
 #endif /* insert_newlines_h */

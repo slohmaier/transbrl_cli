@@ -13,10 +13,10 @@
 #include <stdio.h>
 
 /* function inserts newline every width characters*/
-char *insert_newlines(char *text, int *textlen, int width) {
+char *insert_newlines(char *text, int textlen, int width) {
     int i = width-1;
     int j, i_old = 0;
-    int newsize = (*textlen/width)+1 + *textlen + 1;
+    int newsize = (textlen/width)+2 + textlen + 1;
     char *newtext;
     int cursize = 0;
     
@@ -24,13 +24,13 @@ char *insert_newlines(char *text, int *textlen, int width) {
     if (newtext == NULL) return NULL;
     newtext[0] = '\0';
     
-    while (i < *textlen) {
+    while (i < textlen) {
         j = i;
         bool isnum = false;
         while (text[j] != ' ' && i-j < width-1) {
             j--;
         }
-        if (text[j+1] == '#' && j+2 < *textlen && text[j+2] >= 'a' && text[j+2] <= 'j') isnum = true;
+        if (text[j+1] == '#' && j+2 < textlen && text[j+2] >= 'a' && text[j+2] <= 'j') isnum = true;
         
         //if wholw line has no space break line at end
         if (j-i >= width-1) j = i;
@@ -47,6 +47,7 @@ char *insert_newlines(char *text, int *textlen, int width) {
         i_old = j;
         i = j + width - 1;
     }
+    if (j < textlen) strncat(newtext, &text[j], textlen-j);
     
     //free old text and return new one
     free(text);
