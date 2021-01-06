@@ -20,7 +20,6 @@
 #include "main_check.h"
 #include "main_output.h"
 #include "liblouis.h"
-#include "insert_pagebreaks.h"
 #include "writefile.h"
 #include "set_loupath.h"
 
@@ -99,12 +98,6 @@ int main(int argc, char * argv[]) {
         fprintf(stderr, "PARSER-ERRPR: %s\n", strerror(errno));
         return -1;
     }
-    
-    //insert pagebreaks
-    /* TODO if (insert_pagebreaks(data) == NULL) {
-        fprintf(stderr, "PAGENUM-ERROR: %s", strerror(errno));
-        return -1;
-    }*/
     
     if ((verbose && debug) || strcmp(outfile, "-") == 0) printf("%s", data->output);
     
