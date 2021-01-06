@@ -10,6 +10,7 @@
 #include <string.h>
 #include "outputbuffer.h"
 #include <stdlib.h>
+#include "md2brl_addoutput.h"
 
 //headers to use with strncat
 static char *header_1 = NULL;
@@ -22,46 +23,54 @@ int init_headers(md2brl* data);
 
 /* add title text and one line of header-var followed by a newline*/
 int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md2brl *data) {
-    int neededchars = data->last_text_size + 3/*\n's*/;
-    int headerchars;
-    char *header;
-    
-    //2 newlines for header_1 1 newline otherwise
-    if (detail->level == 1) neededchars += 2;
-    else neededchars += 1;
-    
     //init_headerstrings
     if (header_1 == NULL || header_2 == NULL) init_headers(data);
     
-    //add to size of text the underlying line
-    if (data->last_text_size > data->width) headerchars = data->width;
-    else headerchars = data->last_text_size;
-    neededchars += headerchars;
+    int newlines = 0, i;
+    char *buf;
+    int linestopagebreak, neededlines;
+    int textlen = (int)strlen(data->last_text);
+    int newsize, headerchars;
     
-    //decide what header to use
-    if (detail->level < 2) header = header_1;
-    else header = header_2;
+    for (buf = data->last_text; strchr(buf, '\n') != NULL; buf++) {
+        newlines++;
+    }
+    neededlines = newlines + 1;
+    //count newlines befor header
+    if (detail->level < 2) neededlines += 1;
+    else neededlines += 2;
     
-    if (incbuffer(data, neededchars) == NULL) return -1;
-    
-    //2 newlines for header_1 1 newline otherwise
-    if (detail->level == 1) {
-        strncat(data->output, "\n\n", 2);
-        data->output_size += 2;
+    linestopagebreak = data->height - 1 - data->output_newliens%(data->height);
+    //skip to nextpage if not enough for title + 2 lines
+    if (linestopagebreak < neededlines+2) {
+        newsize = textlen + data->width+1 + 1;
     }
     else {
-        strncat(data->output, "\n", 1);
-        data->output_size += 1;
+        newsize = textlen + neededlines - newlines + 1;
     }
+    buf = (char *)malloc(sizeof(char)*newsize);
+    buf[0] = '\0';
+    if (linestopagebreak < neededlines) {
+        for(i = 0; i < linestopagebreak; i++) strcat(buf, "\n");
+    }
+    else if (data->output_newliens%data->height > 0) {
+        if (detail->level > 2) strcat(buf, "\n");
+        else strcat(buf, "\n\n");
+    }
+    strcat(buf, data->last_text);
+    strcat(buf, "\n");
     
-    //add text, newline, header, 2 newlines
-    strncat(data->output, data->last_text, (size_t)data->last_text_size);
-    strncat(data->output, "\n", 1);
-    strncat(data->output, header, headerchars);
-    strncat(data->output, "\n\n", 2);
-    data->output_size += data->last_text_size + headerchars + 3;
+    //decide what header to use
+    headerchars = textlen;
+    if (headerchars > data->width) headerchars = data->width;
+    if (detail->level < 2) strncat(buf, header_1, headerchars);
+    else strncat(buf, header_2, headerchars);
+    strcat(buf, "\n");
     
-    free(data->last_text);
+    if (md2brl_addoutput(data, buf) == NULL) return -1;
+    
+    //TODO free(data->last_text)?
+    //TODO: free(buf);
     
     return 0;
 }
