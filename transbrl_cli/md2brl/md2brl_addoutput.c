@@ -62,7 +62,7 @@ char *generate_pageline(const int width, const int page) {
     result[0] = '\0';
     
     //fill with spaces to pagenumstring
-    for (i = 0; i < width-numstrlen; i++) {
+    for (i = 0; i < width-numstrlen-1; i++) {
         strcat(result, " ");
     }
     

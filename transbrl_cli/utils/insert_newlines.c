@@ -45,7 +45,7 @@ char *insert_newlines(char *text, int *textlen, int width) {
         strcat(newtext, "\n");
         
         i_old = j;
-        i = j + width;
+        i = j + width - 1;
     }
     
     //free old text and return new one

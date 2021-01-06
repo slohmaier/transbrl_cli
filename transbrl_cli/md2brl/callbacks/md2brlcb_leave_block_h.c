@@ -35,18 +35,18 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     for (buf = data->last_text; strchr(buf, '\n') != NULL; buf++) {
         newlines++;
     }
-    neededlines = newlines + 1;
+    neededlines = newlines + 2;
     //count newlines befor header
     if (detail->level < 2) neededlines += 1;
     else neededlines += 2;
     
     linestopagebreak = data->height - 1 - data->output_newliens%(data->height);
     //skip to nextpage if not enough for title + 2 lines
-    if (linestopagebreak < neededlines+2) {
-        newsize = textlen + data->width+1 + 1;
+    if (linestopagebreak < neededlines) {
+        newsize = textlen + data->width+1 + neededlines;
     }
     else {
-        newsize = textlen + neededlines - newlines + 1;
+        newsize = textlen + neededlines - newlines;
     }
     buf = (char *)malloc(sizeof(char)*newsize);
     buf[0] = '\0';
@@ -69,8 +69,10 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     
     if (md2brl_addoutput(data, buf) == NULL) return -1;
     
-    //TODO free(data->last_text)?
-    //TODO: free(buf);
+    /* these lead to coruupe error why?
+     FIXME
+    free(data->last_text);
+    free(buf);*/
     
     return 0;
 }
