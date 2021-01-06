@@ -19,6 +19,7 @@ typedef struct {
     char *output;
     int output_capacity;
     int output_size;
+    int output_newliens;
     
     bool debug;
     bool verbose;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F809C40925A5ACCC009E2259 /* md2brl_addoutput.c in Sources */ = {isa = PBXBuildFile; fileRef = F809C40825A5ACCC009E2259 /* md2brl_addoutput.c */; };
 		F8C7EC8925A0FB68006426AA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7EC8825A0FB68006426AA /* main.c */; };
 		F8C7ECB725A10B65006426AA /* md2brl.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECB625A10B65006426AA /* md2brl.c */; };
 		F8C7ECC125A11431006426AA /* readfile.c in Sources */ = {isa = PBXBuildFile; fileRef = F8C7ECC025A11431006426AA /* readfile.c */; };
@@ -52,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F809C40725A5ACCC009E2259 /* md2brl_addoutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl_addoutput.h; sourceTree = "<group>"; };
+		F809C40825A5ACCC009E2259 /* md2brl_addoutput.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = md2brl_addoutput.c; sourceTree = "<group>"; };
 		F8C7EC8525A0FB68006426AA /* transbrl_cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = transbrl_cli; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C7EC8825A0FB68006426AA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F8C7ECB525A10B65006426AA /* md2brl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md2brl.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				F8C7ECF525A13363006426AA /* callbacks */,
 				F8C7ECB525A10B65006426AA /* md2brl.h */,
 				F8C7ECB625A10B65006426AA /* md2brl.c */,
+				F809C40725A5ACCC009E2259 /* md2brl_addoutput.h */,
+				F809C40825A5ACCC009E2259 /* md2brl_addoutput.c */,
 				F8C7ECF625A133A0006426AA /* md2brl_parser.h */,
 				F8C7ECF725A133A0006426AA /* md2brl_parser.c */,
 				F8C7ECFA25A133DA006426AA /* md2brl_trans.h */,
@@ -325,6 +330,7 @@
 				F8C7ED2425A218FA006426AA /* outputbuffer.c in Sources */,
 				F8C7ED3125A39509006426AA /* writefile.c in Sources */,
 				F8C7ED1C25A20A68006426AA /* md4c_enu2string.c in Sources */,
+				F809C40925A5ACCC009E2259 /* md2brl_addoutput.c in Sources */,
 				F8C7ECE025A12C29006426AA /* metadata.c in Sources */,
 				F8C7ECE225A12C29006426AA /* commonTranslationFunctions.c in Sources */,
 				F8C7ECEC25A13090006426AA /* lou_backTranslateString.c in Sources */,

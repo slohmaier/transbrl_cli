@@ -31,6 +31,7 @@ md2brl *md2brl_new(int width, int height, char *loutables, bool debug, bool verb
     data->output = (char *)malloc(sizeof(char)*data->output_capacity);
     data->output[0] = '\0';
     data->output_size = 1;
+    data->output_newliens = 0;
     
     return data;
 }
