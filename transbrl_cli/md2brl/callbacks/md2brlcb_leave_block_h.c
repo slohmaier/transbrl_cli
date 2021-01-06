@@ -35,7 +35,7 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     for (buf = data->last_text; strchr(buf, '\n') != NULL; buf++) {
         newlines++;
     }
-    neededlines = newlines + 2;
+    neededlines = newlines + 2; //1 headerline + 1newline
     //count newlines befor header
     if (detail->level < 2) neededlines += 1;
     else neededlines += 2;
@@ -43,7 +43,7 @@ int md2brlcb_leave_block_header(MD_BLOCKTYPE type, MD_BLOCK_H_DETAIL *detail, md
     linestopagebreak = data->height - 1 - data->output_newliens%(data->height);
     //skip to nextpage if not enough for title + 2 lines
     if (linestopagebreak < neededlines) {
-        newsize = textlen + data->width+1 + neededlines;
+        newsize = textlen + data->width + neededlines;
     }
     else {
         newsize = textlen + neededlines - newlines;

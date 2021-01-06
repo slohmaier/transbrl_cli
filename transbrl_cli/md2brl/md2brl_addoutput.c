@@ -30,7 +30,7 @@ md2brl *md2brl_addoutput(md2brl *data, char *text) {
     else if (newlines > linestonextpage) {
         reqpagebreaks = (newlines-linestonextpage)%(data->height-1);
     }
-    newsize = textlen + reqpagebreaks*(data->width+1);
+    newsize = textlen + reqpagebreaks*(data->width+1) + 1; //+1 \n
     incbuffer(data, newsize);
     
     //add newlines with pagebteaks inbetween
@@ -44,9 +44,13 @@ md2brl *md2brl_addoutput(md2brl *data, char *text) {
         if (data->output_newliens%(data->height-1) == 0) {
             buf = generate_pageline(data->width, data->output_newliens/(data->height)+1);
             strcat(data->output, buf);
+            data->output_newliens++;
             free(buf);
         }
     }
+    strcat(data->output, i_old);
+    strcat(data->output, "\n");
+    data->output_newliens++;
     data->output_size = (int)strlen(data->output);
     
     return data;
