@@ -2,5 +2,5 @@ xcuserdata
 .sconsign*
 *.obj
 *.o
-/transbrl_cli.*output.brf
+/transbrl_cli.*
 output.brf

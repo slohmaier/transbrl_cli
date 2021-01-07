@@ -11,14 +11,29 @@
 #include "bool.h"
 #include "liblouis.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 bool isdir(char *path);
 
-int set_loupath(void) {
-    if (isdir("liblouis")) {
+#define MAXPATH 1024
+
+int set_loupath(char *loudatapath) {
+    
+    char buf[MAXPATH];
+    char *program_path;
+
+    buf[0] = '\0';
+
+    program_path = lou_getProgramPath();
+    sprintf(buf, "%s/liblouis", program_path);
+
+    if (isdir(buf)) {
         printf("LALA");
-        lou_setDataPath(".");
+        lou_setDataPath(program_path);
+    } else if (loudatapath != NULL) {
+        lou_setDataPath(loudatapath);
     }
+    free(program_path);
     return 0;
 }
 

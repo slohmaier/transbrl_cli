@@ -8,6 +8,6 @@
 #ifndef set_loupath_h
 #define set_loupath_h
 
-int set_loupath(void);
+int set_loupath(char *loudatapth);
 
 #endif
