@@ -7,7 +7,7 @@
 
 #include "md2brlcb_enter_block.h"
 #include "md2brl.h"
-#include "md4c_enu2string.h"
+#include "../../utils/md4c_enu2string.h"
 #include <stdio.h>
 
 int md2brlcb_enter_block(MD_BLOCKTYPE type, void *detail, void *userdata) {

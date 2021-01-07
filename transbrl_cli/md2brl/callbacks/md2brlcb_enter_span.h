@@ -8,7 +8,7 @@
 #ifndef md2brlcb_enter_span_h
 #define md2brlcb_enter_span_h
 
-#include "md4c.h"
+#include "../../external/md4c/md4c.h"
 
 int md2brlcb_enter_span(MD_SPANTYPE type, void *detail, void *userdata);
 

@@ -8,7 +8,7 @@
 #ifndef md2brl_parser_h
 #define md2brl_parser_h
 
-#include "md4c.h"
+#include "../external/md4c/md4c.h"
 #include "md2brl.h"
 
 MD_PARSER *md2brl_parser(void);

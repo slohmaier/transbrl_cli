@@ -8,7 +8,7 @@
 #ifndef md4c_enu2string_h
 #define md4c_enu2string_h
 
-#include "md4c.h"
+#include "../external/md4c/md4c.h"
 
 char *mdblocktype2string(MD_BLOCKTYPE type);
 

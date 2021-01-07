@@ -8,7 +8,7 @@
 #ifndef md2brl_h
 #define md2brl_h
 
-#include "bool.h"
+#include "../utils/bool.h"
 
 typedef struct {
     //states

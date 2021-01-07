@@ -6,11 +6,10 @@
 //
 
 #include "md2brlcb_leave_block.h"
-#include "md4c_enu2string.h"
+#include "../../utils/md4c_enu2string.h"
 #include <stdio.h>
 #include "md2brlcb_leave_block_h.h"
 #include "md2brlcb_leave_block_p.h"
-#include "md4c_enu2string.h"
 
 int md2brlcb_leave_block(MD_BLOCKTYPE type, void* detail, void* userdata) {
     int ret = 0;

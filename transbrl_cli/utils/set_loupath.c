@@ -9,7 +9,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include "bool.h"
-#include "liblouis.h"
+#include "../external/liblouis/liblouis.h"
 #include <stdio.h>
 #include <stdlib.h>
 

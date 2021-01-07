@@ -7,21 +7,21 @@
 
 #include <stdio.h>
 #ifdef _MSC_VER
-#include "getopt-windows.h"
+#include "externals/getopt-windows.h"
 #else
 #include <getopt.h>
 #endif
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
-#include "md2brl.h"
-#include "md2brl_parser.h"
-#include "readfile.h"
+#include "md2brl/md2brl.h"
+#include "md2brl/md2brl_parser.h"
+#include "utils/readfile.h"
 #include "main_check.h"
 #include "main_output.h"
-#include "liblouis.h"
-#include "writefile.h"
-#include "set_loupath.h"
+#include "external/liblouis/liblouis.h"
+#include "utils/writefile.h"
+#include "utils/set_loupath.h"
 
 void print_help(char **argv);
 int parse_dimenstion(char *optarg, char *title);
@@ -39,13 +39,14 @@ int main(int argc, char * argv[]) {
     //buffers
     char *mdcontent;
     md2brl *data;
+    char *loudatapath;
     //needed for getopt
     int optch;
     //ret to check for errors.
     int ret = 0;
     
     //parse options
-    while ((optch = getopt(argc, argv, "hm:W:H:t:vdo:")) != -1) {
+    while ((optch = getopt(argc, argv, "hm:W:H:t:vdo:l:")) != -1) {
         switch (optch) {
             case 'h':
                 print_help(argv);
@@ -62,6 +63,7 @@ int main(int argc, char * argv[]) {
             case 'o': outfile = optarg; break;
             case 'd': debug = true; break;
             case 'v': verbose = true; break;
+            case 'l': loudatapath = optarg; break;
         }
     }
     
@@ -77,7 +79,7 @@ int main(int argc, char * argv[]) {
     if (verbose) louloglevel = LOU_LOG_INFO;
     if (debug) louloglevel = LOU_LOG_DEBUG;
 
-    if (set_loupath() != 0) {
+    if (set_loupath(loudatapath) != 0) {
         fprintf(stderr, "ERROR: Could not set lou path!\n");
         return 1;
     }

@@ -8,7 +8,7 @@
 #include "md2brlcb_text.h"
 #include "md2brl.h"
 #include "md2brl_trans.h"
-#include "insert_newlines.h"
+#include "../../utils/insert_newlines.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

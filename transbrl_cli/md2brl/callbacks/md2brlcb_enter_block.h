@@ -8,7 +8,7 @@
 #ifndef md2brlcb_enter_block_h
 #define md2brlcb_enter_block_h
 
-#include "md4c.h"
+#include "../../external/md4c/md4c.h"
 
 int md2brlcb_enter_block(MD_BLOCKTYPE type, void *detail, void *userdata);
 

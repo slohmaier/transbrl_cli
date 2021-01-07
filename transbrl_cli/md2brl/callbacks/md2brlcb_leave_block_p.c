@@ -7,9 +7,9 @@
 
 #include "md2brlcb_leave_block_p.h"
 #include <string.h>
-#include "outputbuffer.h"
+#include "../../utils/outputbuffer.h"
 #include <stdlib.h>
-#include "insert_newlines.h"
+#include "../../utils/insert_newlines.h"
 #include "md2brl_addoutput.h"
 
 #define LINES_WITHOUT_INDENT 2

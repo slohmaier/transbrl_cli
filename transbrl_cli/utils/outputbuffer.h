@@ -8,7 +8,7 @@
 #ifndef outputbuffer_h
 #define outputbuffer_h
 
-#include "md2brl.h"
+#include "../md2brl/md2brl.h"
 
 md2brl *incbuffer(md2brl *data, int neededsize);
 void movechar(char *text, int textlen, int start, int offset);

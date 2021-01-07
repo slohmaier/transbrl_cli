@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "outputbuffer.h"
+#include "../utils/outputbuffer.h"
 
 char *generate_pageline(const int width, const int page);
 

@@ -8,7 +8,7 @@
 #include "md2brl_trans.h"
 #include <stdlib.h>
 #include <string.h>
-#include "liblouis.h"
+#include "../external/liblouis/liblouis.h"
 
 char *md2brl_trans(const char *text, int *textlen, const char *loutable) {
     char *result;
