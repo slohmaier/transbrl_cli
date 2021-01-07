@@ -36,7 +36,7 @@ void print_startmsg(char *markdownfile, int width, int height, char *loutables, 
     printf("transbrl_cli - Version TODO\n");
     printf("###########################\n");
     printf("# cwd: %s\n", cwd);
-    printf("# md-fike: %s\n", markdownfile);
+    printf("# md-file: %s\n", markdownfile);
     printf("# outfile: %s\n", outfile);
     printf("# Page: width=%d height=%d\n", width, height);
     printf("# liblouis tables: %s\n", loutables);
