@@ -7,7 +7,9 @@
 
 #include "main_output.h"
 
+#include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
 #include "external/liblouis/liblouis.h"
 
 void print_help(char **argv) {
@@ -24,8 +26,16 @@ void print_help(char **argv) {
 }
 
 void print_startmsg(char *markdownfile, int width, int height, char *loutables, char *outfile) {
+    char cwd[PATH_MAX];
+    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+        printf("Current working dir: %s\n", cwd);
+    }
+    else {
+        fprintf(stderr, "getcwd() error");
+    }
     printf("transbrl_cli - Version TODO\n");
     printf("###########################\n");
+    printf("# cwd: %s\n", cwd);
     printf("# md-fike: %s\n", markdownfile);
     printf("# outfile: %s\n", outfile);
     printf("# Page: width=%d height=%d\n", width, height);
