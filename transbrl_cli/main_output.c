@@ -7,9 +7,12 @@
 
 #include "main_output.h"
 
+
+#ifndef _MSC_VER
 #include <unistd.h>
-#include <stdio.h>
 #include <limits.h>
+#endif
+#include <stdio.h>
 #include "external/liblouis/liblouis.h"
 
 void print_help(char **argv) {
@@ -26,6 +29,7 @@ void print_help(char **argv) {
 }
 
 void print_startmsg(char *markdownfile, int width, int height, char *loutables, char *outfile) {
+    #ifndef _MSC_VER
     char cwd[PATH_MAX];
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
         printf("Current working dir: %s\n", cwd);
@@ -33,9 +37,12 @@ void print_startmsg(char *markdownfile, int width, int height, char *loutables, 
     else {
         fprintf(stderr, "getcwd() error");
     }
+    #endif
     printf("transbrl_cli - Version TODO\n");
     printf("###########################\n");
+    #ifndef _MSC_VER
     printf("# cwd: %s\n", cwd);
+    #endif
     printf("# md-file: %s\n", markdownfile);
     printf("# outfile: %s\n", outfile);
     printf("# Page: width=%d height=%d\n", width, height);

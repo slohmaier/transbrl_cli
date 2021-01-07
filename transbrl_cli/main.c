@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #ifdef _MSC_VER
-#include "externals/getopt-windows.h"
+#include "external/getopt-windows.h"
 #else
 #include <getopt.h>
 #endif
