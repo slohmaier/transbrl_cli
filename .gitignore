@@ -4,3 +4,4 @@ xcuserdata
 *.o
 /transbrl_cli.*
 output.brf
+!/transbrl_cli.pro
